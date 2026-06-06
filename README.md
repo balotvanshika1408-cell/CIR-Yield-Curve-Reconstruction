@@ -1,4 +1,4 @@
-# Yield Curve Reconstruction Using the Cox-Ingersoll-Ross (CIR) Model
+## Yield Curve Reconstruction Using the Cox-Ingersoll-Ross (CIR) Model
 
 ## Project Overview
 
