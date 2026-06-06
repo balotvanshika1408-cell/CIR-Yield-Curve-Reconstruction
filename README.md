@@ -13,7 +13,6 @@ The project focuses on:
 * Performance evaluation using RMSE, MAE, and R² metrics.
 * Verification of the Feller stability condition.
 
----
 
 ## Mathematical Background
 
@@ -38,7 +37,6 @@ The corresponding continuously compounded yield is:
 
 y(T) = -ln(P(T))/T
 
----
 
 ## Dataset
 
@@ -58,7 +56,6 @@ The project uses historical yield curve data containing the following maturities
 
 The 3-month yield is used as a proxy for the instantaneous short rate.
 
----
 
 ## Methodology
 
@@ -127,72 +124,10 @@ Key observations include:
 
 Example evaluation metrics:
 
-* RMSE: [Insert Value]
-* MAE: [Insert Value]
-* R²: [Insert Value]
+* RMSE: 0.001966
+* MAE:  0.001165
+* R²:   0.923706
 
----
-
-## Project Structure
-
-```text
-├── data/
-│   ├── train_data.csv
-│   └── test_data.csv
-│
-├── notebooks/
-│   └── Finance_project.ipynb
-│
-├── results/
-│   ├── plots/
-│   └── evaluation_metrics/
-│
-└── README.md
-```
-
----
-
-## Installation
-
-Clone the repository:
-
-```bash
-git clone https://github.com/your-username/your-repository-name.git
-```
-
-Navigate to the project folder:
-
-```bash
-cd your-repository-name
-```
-
-Install dependencies:
-
-```bash
-pip install numpy pandas matplotlib scipy scikit-learn
-```
-
----
-
-## Running the Project
-
-Open the notebook:
-
-```bash
-jupyter notebook
-```
-
-or upload the notebook directly to Google Colab.
-
-Run all cells sequentially:
-
-1. Data preprocessing
-2. CIR calibration
-3. Feller condition verification
-4. Yield curve prediction
-5. Performance evaluation
-
----
 
 ## Limitations
 
@@ -203,7 +138,6 @@ This implementation uses a single-factor CIR framework. While effective for yiel
 * Extreme market conditions may reduce predictive accuracy.
 * Long-term yield dynamics may require multi-factor models.
 
----
 
 ## Future Extensions
 
@@ -215,15 +149,12 @@ Potential improvements include:
 * Physics-Informed Neural Networks (PINNs)
 * Deep learning based yield curve forecasting
 
----
 
 ## Author
 
 Vanshika Balot
 
-M.Tech / Finance Modelling Project
 
-Interest Rate Modelling and Yield Curve Reconstruction using the CIR Framework.
 
 
 
