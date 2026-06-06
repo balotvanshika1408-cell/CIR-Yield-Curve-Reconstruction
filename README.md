@@ -87,9 +87,19 @@ For every trading day:
 3. Squared errors between market yields and model yields are calculated.
 4. Errors are accumulated across all observations.
 
-The objective function is minimized using the Nelder-Mead optimization algorithm.
+By utilizing information from the entire yield curve rather than relying on a single maturity, the calibration procedure captures a broader representation of market dynamics and improves the overall fit of the model.
 
-### 4. Feller Condition Verification
+### 4. Numerical Optimization Strategy
+
+The parameter estimation problem is formulated as a nonlinear optimization task. The objective is to identify the parameter values that minimize the total discrepancy between observed market yields and CIR-generated yields.
+
+The Nelder-Mead simplex algorithm is employed to solve this optimization problem. Unlike gradient-based methods, Nelder-Mead does not require analytical derivatives of the objective function, making it particularly suitable for complex financial models where closed-form gradients may be difficult to obtain.
+
+Starting from an initial parameter guess, the algorithm iteratively explores the parameter space and updates the parameter estimates in the direction of lower calibration error. This process continues until convergence criteria are met or the maximum number of iterations is reached.
+
+The Nelder-Mead approach was selected because it is robust, computationally efficient for low-dimensional parameter estimation problems, and performs well when calibrating nonlinear interest rate models such as the CIR framework.
+
+### 5. Feller Condition Verification
 
 After calibration, the following stability condition is checked:
 
@@ -97,11 +107,11 @@ After calibration, the following stability condition is checked:
 
 If the condition is violated, a corrective adjustment is applied to maintain model stability.
 
-### 5. Out-of-Sample Testing
+### 6. Out-of-Sample Testing
 
 The calibrated parameters are applied to unseen test data to reconstruct yield curves at selected maturities.
 
-### 6. Performance Evaluation
+### 7. Performance Evaluation
 
 Model accuracy is measured using:
 
@@ -109,7 +119,6 @@ Model accuracy is measured using:
 * Mean Absolute Error (MAE)
 * Coefficient of Determination (R²)
 
----
 
 ## Results
 
