@@ -150,9 +150,7 @@ Potential improvements include:
 * Deep learning based yield curve forecasting
 
 
-## Author
 
-Vanshika Balot
 
 
 
